@@ -18,14 +18,14 @@ function main() {
     s.register(function(tweet) {
     	
         var profile_image = "<img src=\"" + tweet.profile_image_url+ "\" />";
-	if(twitCount==10){
+	if(twitCount==11){
 	    $("#tweets p:last-child").remove();
-            twitCount=1;
+            twitCount=10;
 	}
 	if(count){
-	$("#tweets").prepend($("<p class='green'>"+profile_image+tweet.text+"</p>").fadeIn());
+	$("#tweets").prepend($("<p class='green'>"+profile_image+tweet.text+"</p>").slideDown());
 	}else{
-	$("#tweets").prepend($("<p class='teal'>"+profile_image+tweet.text+"</p>").fadeIn());
+	$("#tweets").prepend($("<p class='teal'>"+profile_image+tweet.text+"</p>").slideDown());
 	}
         count = !count;	 	
     	twitCount++;
